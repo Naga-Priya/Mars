@@ -1,0 +1,40 @@
+What is JSX?
+
+2 ways to create new components:
+--------------------------------
+Class component
+----------------
+default export is used to export only one object
+when using default export you can import it in any name
+e.g export default TodoComponent;
+import newComp from ./component/TodoComponent
+
+If you want to export multiple components, you should do named export.
+e.g: export {TodoComponent};
+import {TodoComponent} from './component/TodoComponent';
+
+Named export should be imported with same name.
+
+Alias:
+------
+
+Functional component
+--------------------
+Just a function returning elements.
+No render function is needed
+stateless component??
+hooks??
+
+Props
+-----
+Props are properties used to pass data between react components.
+data flow is unidirectional, from parent to child only. Data cannot flow from child to parent. Props are immutable, cannot be changed.
+
+ReactDom.render(<APP name="Nathan"/>, document.get)
+
+State:
+------
+Class Components use state to manage their own data. It is internal to compponent and cannot be passed to other component.
+state cannot be modified direstly like this.state.name="priya" instead we have to use setState to modify state value.
+After react hooks was introduced functinal components can also maintain states.
+state is generally updated by event handlers.
