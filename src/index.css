@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  text-align: center;
+  font: oblique 23deg;
+  color: blue;
+  line-height: 7vw;
+  word-spacing: 2px;
+  font-size: 3vw;
+  display:block;
+  
+}
+.centercomp {
+  margin-left: auto;
+  height:auto;
+  width:auto;
+  /* margin: auto; */
+  justify-self:center;
+  border: 1px solid black;
+}
+
+.numblock {
+  display:flex;
+  gap:2vw;
+  padding: 2vw;
+  margin-left: auto;
+}
+
+.numblock>label {
+  order: 1;
+  font-size: 2vw;
+}
+
+.numblock>input {
+  order: 2;
+  position: fixed;
+  height:3vw;
+  left: 30vw;
+  font-size: 2vw;
+  color: palevioletred;
+}
+
+.numblock>input:hover {
+  order: 2;
+  position: absolute;
+  height:3vw;
+  left: 30vw;
+  font-size: 2vw;
+  color: palevioletred;
+  box-shadow: 2px 2px blue;
+}
+
+.operations {
+  display:flex;
+  flex-flow: row wrap;
+  gap: 2vw;
+  align-items: center;
+  padding: 2vw;
+  height:15vw;
+  width:30vw;
+  /* position: absolute; */
+  left: 10vw;
+  align-content:space-around ;
+  justify-content: center;
+}
+
+.operations button {
+  height:5vw;
+  width:5vw;
+  text-align: center;
+  font-weight: 500;
+  font-size: larger;
+  vertical-align: middle;
+}
+
+.operations button:hover {
+  background-color: lightskyblue;
+  box-shadow: 1px 1px 2px pink;
+  
+}
+.operations button:active {
+  background-color: pink;
+}
