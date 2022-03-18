@@ -3,17 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import MyApp from './App';
 //import {TodoComponent} from './component/TodoComponent';
-//import MyFuncComponent from './component/MyFuncComponent';
+import MyFuncComponent from './component/MyFuncComponent';
 //default export hence imported under new name
 import SimpleCalculator from './component/Calculator';
 import reportWebVitals from './reportWebVitals';
+import EffectHooks from './component/effectHooks';
+import App from './App';
+import Calculator from './component/Calculator';
+import CalculatorFn from './component/CalculatorFn';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* name is props passed to child TodoComponent */}
     {/*<TodoComponent name="Priya"/>
     <MyFuncComponent name="Ram" age={37}/> */}
+    {/* <MyFuncComponent />
     <SimpleCalculator/>
+    <EffectHooks/> */}
+    {/* <App/> */}
+    {/* <Calculator/> */}
+    <CalculatorFn/>
   </React.StrictMode>,
   document.getElementById('root')
 );

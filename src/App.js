@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import {TodoComponent} from './component/TodoComponent';
+import StylingComponent from './component/StylingComponent.js';
+import  Component1  from './component/Component1.js';
+
 
 function App() {
   return (
@@ -19,6 +23,9 @@ function App() {
         </a>
       </header> */}
       <h1>Hello World!!</h1>
+    {/* <TodoComponent/> */}
+    {/*<StylingComponent/>*/}
+    <Component1/>
     </div>
   );
 }

@@ -45,7 +45,7 @@ h1 {
 
 .numblock>input {
   order: 2;
-  position: fixed;
+  /* position: relative; */
   height:3vw;
   left: 30vw;
   font-size: 2vw;
@@ -54,7 +54,7 @@ h1 {
 
 .numblock>input:hover {
   order: 2;
-  position: absolute;
+  /* position: absolute; */
   height:3vw;
   left: 30vw;
   font-size: 2vw;

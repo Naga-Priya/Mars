@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  color:greenyellow
+}
+
+.greenTextbg {
+  background-color: yellow;
 }
 
 .App-logo {

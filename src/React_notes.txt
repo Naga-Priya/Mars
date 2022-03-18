@@ -1,3 +1,42 @@
+What is React:
+Java script library to develop user interface.
+React allows developers to Build encapsulated components that manage their own state, then compose them to make complex UIs.
+React provides virtual dom on top of DOM hence whole page need not be render when a component changes.
+Search Engine Optimisation
+Limitations:
+we have to install and depend on lot of 3rd party modules to call APIs, manage states, debug tools e.t.c
+readex??
+
+diffing: comparing virtual dom and new virtual dom whenever an element gets added. based on the changes React decides the best way to make this change in real DOM. hence performance improves.
+reconcilation: making the change in real Dom after diffing.
+jsx:JSX extends the ECMAScript so that XML/HTML-like text can co-exist along with JavaScript react code. Babel is used to understand JSX
+e.g: const h1 = <h1>Hello Programmers</h1>;
+
+types of compopnent: 
+Class compopnent
+function component
+
+We have a parent component which acts as a container for other child components.
+
+Each of the child components has unique function and independent of each other.
+
+**what is virtual DOM? what does it do?
+avoids rerendering of whole page by acting as a layer above DOM
+
+2 methods to set up react environemnt
+-------------------------
+1> writing React directly in HTML by adding 3 script tags in HTML file. This is called JSX (Java script and XML)
+react.development.js,  react-dom.development.js, babel.js
+What is babel? JSX is not understood by browser, Babel converts JSX to browser compatible JS code.
+
+const element = <h1> HEllo from babel</h1>
+react elemnt?
+what is rendering? how is it done?
+
+2>Creating a react app using 'npx create-react-app react-code', node will create a react app for us. Only npm version 6 and above works.
+
+Two ways to create components:
+
 What is JSX?
 
 2 ways to create new components:
@@ -21,7 +60,7 @@ Alias:
 Functional component
 --------------------
 Just a function returning elements.
-No render function is needed
+Render function is not present for functional component
 stateless component??
 hooks??
 
@@ -38,3 +77,26 @@ Class Components use state to manage their own data. It is internal to compponen
 state cannot be modified direstly like this.state.name="priya" instead we have to use setState to modify state value.
 After react hooks was introduced functinal components can also maintain states.
 state is generally updated by event handlers.
+
+Hooks are Java script functions that are used to manipulate state in functional components.
+Types of Hooks
+UseState:
+this is used to create a hook to set a hookfunction to state variable.
+hooks can be used to update single variables like number boolean, e.tc or even an object, array
+but when setting hook for object properties, ensure that single hook updates all the properties of an objkect,
+otherwise if different hooks are used, the properties that are not set in a hook will be overridden.
+
+UseEffect Hooks:
+Used to perform side effects in your components.
+this creates a cause and effect pattern.
+UseEffect(function, dependencies array)
+whenever the elements in array changes then useEffect function is called.
+
+Why we need styling modules?
+Though App.css is not imported in TodoComponent, still
+            greenTextbg is used here. we dont have any error because when rendered
+            this component is a part of App component which refers to App.css.
+            If there is a conflicting style name in .style.css' and 'app.css'
+            then only 'style.css' will have preference.
+            When number of components grow, keeping track of styles might be difficult
+            so we can use CSS Modules.
