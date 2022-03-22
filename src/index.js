@@ -11,6 +11,9 @@ import EffectHooks from './component/effectHooks';
 import App from './App';
 import Calculator from './component/Calculator';
 import CalculatorFn from './component/CalculatorFn';
+import ParentToChild from './component/ParentToChild';
+import TwoWayBinding from './component/TwoWayBinding';
+import ParentForm from './component/ParentForm';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,7 +25,11 @@ ReactDOM.render(
     <EffectHooks/> */}
     {/* <App/> */}
     {/* <Calculator/> */}
-    <CalculatorFn/>
+    {/* <CalculatorFn/> */}
+    {/* <MyFuncComponent/> */}
+    {/* <ParentToChild/> */}
+    {/* <TwoWayBinding/> */}
+    <ParentForm />
   </React.StrictMode>,
   document.getElementById('root')
 );
