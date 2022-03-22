@@ -51,43 +51,47 @@ function ParentForm(props) {
 
     }
     return (
-        <div className=''>
-            <b>FirstName: </b> 
-            <input type="name" id ="fn"></input>
-            <br></br>
-            <b>LastName: </b> 
-            <input type="name" id ="ln"></input>
-            <br></br>
-            <b>Age: </b> 
-            <input type="name" id="age"></input>
-            <br></br>
-            <b>Address:</b>
-            <textarea id="address" rows="100vw" cols="30vw"></textarea>
-            <br></br>
-            <b>Hobbies:</b>
+        <div>
+            <center><h1 className='headingStyle'>Personal Information</h1></center>
+        <div className='Gridcontainer'>
+            <b className="Labelstyle">FirstName: </b> 
+            <input className="fields" type="name" id ="fn"></input>
+            
+            <b className="Labelstyle">LastName: </b> 
+            <input className="fields" type="name" id ="ln"></input>
+            
+            <b className="Labelstyle">Age: </b> 
+            <input className="fields" type="name" id="age"></input>
+            
+            <b className="Labelstyle">Address:</b>
+            <textarea className="fields" id="address" rows="100vw" cols="30vw"></textarea>
+            
+            <b className="Labelstyle">Hobbies:</b>
             <select id="Hobbies" multiple>
-                <option key="pnt">Painting</option>
-                <option key="ply">Playing Instruments</option>
-                <option key="vdo">Video Games</option>
-                <option key="hik">Hiking</option>
-                <option key="swm">Swimming</option>
-                <option key="Dnc">Dancing</option>
+                <option className="fields" key="pnt">Painting</option>
+                <option className="fields" key="ply">Playing Instruments</option>
+                <option className="fields" key="vdo">Video Games</option>
+                <option className="fields" key="hik">Hiking</option>
+                <option className="fields" key="swm">Swimming</option>
+                <option className="fields" key="Dnc">Dancing</option>
             </select>
-            <br></br>
-            <button onClick={submitBtn}>Submit</button>
-            <br></br>
+            
+            <button className="buttonstyle" onClick={submitBtn}>Submit</button>
+            
             
             {/* <h3>{fname} - {lname} - {age} - {addr} - </h3>
             <ol>
             //Use map to render array in react
             {hobbies.map((option) => {return <li key={option}>{option}</li>})}
             </ol> */}
-            <div id="childcomp" style={{backgroundColor:'pink', display:'none'}} >
+            <div id="childcomp" className="SubmissionText" style={{backgroundColor:'pink', display:'none'}} >
             <DisplaySubmission fname={fname}
                             lname={lname}
                             age={age} 
+                            addr={addr}
                             hobbies = {hobbies}/>
                             </div>
+        </div>
         </div>
     );
 }

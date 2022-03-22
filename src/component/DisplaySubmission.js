@@ -7,6 +7,7 @@ function DisplaySubmission(props) {
             <h2>First Name: </h2> <b>{props.fname}</b> 
             <h2>Last Name: </h2> <b>{props.lname}</b>
             <h2>Age: </h2> <b>{props.age}</b>
+            <h2>Address: </h2> <b>{props.addr}</b>
             {/* <p>{props.hobbies.join(", ")}</p> */}
             <h3> Hobbies are :</h3>
             <ol>
