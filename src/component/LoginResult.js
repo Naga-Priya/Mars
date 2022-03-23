@@ -9,12 +9,13 @@ const components = {
     emptypg : Empty
   }
 function LoginResult(props) {
-    const ThePage = components[props.page];
+    console.log({props});
+    const ThePage = components[props.pagenum.pageNum];
     
     return (
         <div>
             
-            <ThePage />
+            <ThePage user={props.userName.uname}/>
         </div>
     );
 }

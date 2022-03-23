@@ -22,7 +22,7 @@ function Signup(props) {
         document.getElementById("userId").value =="priya@gmail.com"){
             //information matches
             console.log("TRUE");
-            {props.setPage("welcome")};
+            {props.setPage("welcome",name)};
         }
         else
         {

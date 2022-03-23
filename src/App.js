@@ -26,14 +26,18 @@ function App() {
     welcome : Welcome,
     errorpg : Errorpage,
     emptypg : Empty
-  }
+  };
+  const [uname,setUname] = useState('user');
 
-  const setPage = (num) => {
+  const setPage = (num,name) => {
     //setPageNum(num);
     setPageNum(num);
+    setUname(name);
     console.log("num is ",num)
   }
-
+  const propsObj = {'pagenum':{pageNum},'userName':{uname}};
+  console.log("In App: ",propsObj);
+  <LoginResult {...propsObj}/>
   let ThePage = Pages[{pageNum}];
   return (
     <div className="App">
@@ -88,7 +92,7 @@ function App() {
     </Router>
     Router Sample Code */}
     <Signup setPage={setPage}/>
-    <LoginResult page={pageNum}/>
+    <LoginResult {...propsObj}/>
     <Router>
             <div style={{display:'none'}}>
             
