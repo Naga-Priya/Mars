@@ -21,7 +21,6 @@ function Signup(props) {
         document.getElementById("pwd").value == "Priya" &&
         document.getElementById("userId").value =="priya@gmail.com"){
             //information matches
-            console.log("TRUE");
             {props.setPage("welcome",name)};
         }
         else

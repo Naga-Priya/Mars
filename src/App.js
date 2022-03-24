@@ -36,9 +36,7 @@ function App() {
     console.log("num is ",num)
   }
   const propsObj = {'pagenum':{pageNum},'userName':{uname}};
-  console.log("In App: ",propsObj);
-  <LoginResult {...propsObj}/>
-  let ThePage = Pages[{pageNum}];
+  
   return (
     <div className="App">
       {/* <header className="App-header">
