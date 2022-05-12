@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import MyApp from './App';
@@ -14,25 +14,42 @@ import CalculatorFn from './component/CalculatorFn';
 import ParentToChild from './component/ParentToChild';
 import TwoWayBinding from './component/TwoWayBinding';
 import ParentForm from './component/ParentForm';
+import DynamicParent from './component/DynamicParent';
 
+import ColorReducer from './reduxppt/ColorReducer.js';
+import ColorPicker from './reduxppt/ColorPicker';
+
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const store =createStore(ColorReducer);
 ReactDOM.render(
-  <React.StrictMode>
-    {/* name is props passed to child TodoComponent */}
-    {/*<TodoComponent name="Priya"/>
-    <MyFuncComponent name="Ram" age={37}/> */}
-    {/* <MyFuncComponent />
-    <SimpleCalculator/>
-    <EffectHooks/> */}
-    {/* <App/> */}
-    {/* <Calculator/> */}
-    {/* <CalculatorFn/> */}
-    {/* <MyFuncComponent/> */}
-    {/* <ParentToChild/> */}
-    {/* <TwoWayBinding/> */}
-    <ParentForm />
-  </React.StrictMode>,
+  <Provider store = {store}>
+    <ColorPicker />
+  </Provider>,
   document.getElementById('root')
 );
+
+
+// ReactDOM.render(
+  
+//   <React.StrictMode>
+//     {/* name is props passed to child TodoComponent */}
+//     {/*<TodoComponent name="Priya"/>
+//     <MyFuncComponent name="Ram" age={37}/> */}
+//     {/* <MyFuncComponent />
+//     <SimpleCalculator/>
+//     <EffectHooks/> */}
+//     {/* <App/> */}
+//     {/* <Calculator/> */}
+//     {/* <CalculatorFn/> */}
+//     {/* <MyFuncComponent/> */}
+//     {/* <ParentToChild/> */}
+//     {/* <TwoWayBinding/> */}
+//     {/* <ParentForm /> */}
+//       </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

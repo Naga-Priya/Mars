@@ -85,6 +85,7 @@ function ParentForm(props) {
             {hobbies.map((option) => {return <li key={option}>{option}</li>})}
             </ol> */}
             <div id="childcomp" className="SubmissionText" style={{backgroundColor:'pink', display:'none'}} >
+            {/* //Use object and destruct in child */}
             <DisplaySubmission fname={fname}
                             lname={lname}
                             age={age} 

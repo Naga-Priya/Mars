@@ -1,9 +1,13 @@
 import React, {useState} from "react";
+import UseCustomHook from "./UseCustomeHook";
 //rsf creates func component
 
-function MyFuncComponent(){
+//import UseCustomHook from './UseCustomHook';
+
+function MyFuncComponent(props){
     //The parameter passed to useState becomes initial value of
     //property 'color'
+    const customButton = UseCustomHook(0,"First Component");
     const[color,setColor]=useState("Red");
     const[car,setCar] = useState({
         brand:"VW",
@@ -22,6 +26,7 @@ function MyFuncComponent(){
             <button onClick={()=>setCar({...car,color:"yellow"})}>
                 Change Color
             </button>
+            <button onClick ={customButton}>Custom Button</button>
         </div>
     )
 }

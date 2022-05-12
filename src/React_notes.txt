@@ -100,3 +100,14 @@ Though App.css is not imported in TodoComponent, still
             then only 'style.css' will have preference.
             When number of components grow, keeping track of styles might be difficult
             so we can use CSS Modules.
+
+Why context is used?
+to avoid call back hell and to efficiently pass data netween paent and child.
+
+Passing data between Parent and child, from child to parent, between siblings
+Dynamic parent rendering children.
+
+Route to default page
+
+useNavigate() Hooks, This replaces History function that was available before version 6
+used to navigate user to previous, next?? or specific pages
